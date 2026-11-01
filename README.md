@@ -1,4 +1,4 @@
-<p align="center"><img src="public/media/logo.png" width="120" alt="LBXD Story Generator logo"></p>
+<p align="center"><img src="public/media/logo.png" width="500" alt="LBXD Story Generator logo"></p>
 
 <h1 align="center">LBXD Story Generator</h1>
 
