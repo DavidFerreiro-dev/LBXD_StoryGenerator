@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LBXD Story Generator</title>
+<link rel="icon" type="image/png" href="media/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="app">
+  <section class="panel">
+    <h1>LBXD Story Generator</h1>
+
+    <div class="block">
+      <label for="q">Movie</label>
+      <div class="row">
+        <input id="q" type="search" placeholder="Search by title…" autocomplete="off">
+      </div>
+      <ul id="results" class="results" hidden></ul>
+      <p id="msg" class="msg" role="status"></p>
+    </div>
+
+    <div class="block">
+      <label>Rating <output id="ratingOut">4 / 5</output></label>
+      <div class="stars" id="stars"></div>
+      <button id="clear" class="ghost small">No rating</button>
+    </div>
+
+    <div class="block">
+      <label for="title">Title</label>
+      <input id="title" type="text" placeholder="Filled in when you pick a movie">
+      <div class="row">
+        <button id="tLoc" class="ghost small">English</button>
+        <button id="tOrig" class="ghost small">Original</button>
+      </div>
+    </div>
+
+    <div class="block">
+      <label>Elements</label>
+      <label class="chk"><input type="checkbox" id="showBrand" checked> Letterboxd branding</label>
+      <label class="chk"><input type="checkbox" id="showCircles" checked> LBXD dots</label>
+      <label class="chk"><input type="checkbox" id="showOn" checked> “ON” divider</label>
+    </div>
+
+    <div class="block">
+      <label for="grad">Gradient intensity <output id="gradOut"></output></label>
+      <input type="range" id="grad" min="0" max="100" value="55">
+      <label for="pw">Poster width <output id="pwOut"></output></label>
+      <input type="range" id="pw" min="55" max="85" value="74">
+      <label for="psize">TMDB image size</label>
+      <select id="psize">
+        <option value="w342">w342</option><option value="w500">w500</option>
+        <option value="w780" selected>w780</option><option value="original">original (max quality)</option>
+      </select>
+    </div>
+
+    <div class="block">
+      <label for="jq">JPG quality <output id="jqOut"></output></label>
+      <input type="range" id="jq" min="60" max="100" value="95">
+      <div class="row">
+        <button id="dlPng" class="primary" disabled>DESCARGAR PNG</button>
+        <button id="dlJpg" class="primary alt" disabled>DESCARGAR JPG</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="stage">
+    <div class="frame"><canvas id="cv" width="1080" height="1920" aria-label="Preview 1080 by 1920"></canvas></div>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
